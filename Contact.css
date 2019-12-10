@@ -1,0 +1,225 @@
+/*--DEVELOPER:Zunair Ahmed, IS117-005, Fall 2019 */
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family:  Sans-serif, monospace;
+    box-sizing: border-box;
+}
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+/*-------------------------------------------HEADER AND MAIN PAGE-----------------------------------------------------*/
+.header li a.active { color: #ee6d52 }
+
+.header {
+    background-color: black;
+    position: fixed;
+    width: 100%;
+    z-index: 3;
+    top: 0;
+    left: 0;
+    border-bottom: 1px solid black;
+}
+.header h1 {
+    display: block;
+    float: left;
+    font-size: 1.05em;
+    padding: 20px 50px;
+    text-transform: uppercase;
+    color: #ee6d52;
+    font-weight: normal;
+}
+.header h2 {
+    display: block;
+    float: left;
+    font-size: 1em;
+    padding: 20px 20px;
+    text-transform: uppercase;
+    color: white;
+    font-weight: normal;
+
+}
+.header .menu {
+    clear: both;
+    max-height: 0;
+    transition: max-height .2s ease-out;
+    padding-right: .5in;
+}
+.header ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    overflow: hidden;
+    background-color: black;
+}
+.header li a {
+    display: block;
+    padding: 20px 20px;
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    font-weight: normal;
+}
+.main {
+    background: black;
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.text1 h1 {
+    text-align: center;
+    font-size: 2vw;
+    font-weight: lighter;
+    color: white;
+
+}
+
+.text2 h2 {
+    text-transform: uppercase;
+    font-size: 10vw;
+    color: rgba(255, 255, 255, .1);
+    background: linear-gradient(90deg, #ee6d52, #ee6d52, #ee6d52);
+    -webkit-background-clip: text;
+    animation-name: colorchange;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+@keyframes colorchange {
+    0% {
+        background-position: right 0 bottom 0;
+    }
+    50% {
+        background-position: right 10em bottom 0;
+    }
+    100% {
+        background-position: right 0 bottom 0;
+    }
+}
+.text3 h3 {
+    text-align: center;
+    font-size: 2vw;
+    font-weight: lighter;
+    color: white;
+}
+@media (min-width: 24em) {
+    .header h2{ display: none;}
+    .header li { float: left;}
+    .header li a { padding: 20px 30px;}
+    .header .menu {clear: none; float: right; max-height: none; padding-right: .15in;}
+}
+@media screen and (max-width: 700px) {
+    .header h1 { display: none; font-size: 5vw}
+    .header h2 { display: block; color: #ee6d52; font-size: 15px}
+    .header h3 {font-size: 5vw;}
+    .header li a { font-size: 15px; padding: 20px 20px;}
+}
+/*-----------------------------------------------Footer---------------------------------------------------------------*/
+footer {
+    background-color: black;
+    border-top: 1px solid black;
+    text-align:center;
+    padding:20px;
+    left: 0;
+    bottom: 0;
+    height: 60px;
+    width: 100%;
+    color: #ee6d52;
+}
+/*--------------------------------------------------Form------------------------------------------------------------*/
+
+input[type=text], select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+}
+
+input[type=submit] {
+    background-color: black;
+    color: #ee6d52;
+    border-color: #ee6d52;
+    padding: 12px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 15px;
+}
+
+input[type=submit]:hover {
+    background-color: #ee6d52;
+    color: white;
+    transition: .2s;
+}
+
+.container {
+    width: 75%;
+    margin-top: .5in;
+    border-radius: 5px;
+    background-color: black;
+    padding: 20px;
+}
+
+.container h1, h2 {
+    color: white;
+    font-size: 1.5vw;
+    text-align: center;
+    font-weight: normal;
+}
+
+.container h1{
+    padding-bottom: .30in;
+}
+.container h2 {
+    padding-top: .15in;
+    padding-bottom: .15in;
+}
+::placeholder {
+    color: white;
+}
+
+.input {
+    color: white;
+}
+.input2 {
+    background-color: black;
+    border-color: #ee6d52;
+}
+.portfolio {
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+    vertical-align: top;
+    color: #ee6d52;
+    text-decoration: none;
+    border: 1px solid #ee6d52;
+    transition: 0.2s;
+    width: 100%;
+    text-align: center;
+    font-size: 15px;
+    padding-top: .10in;
+    padding-bottom: .10in;
+    border-radius: 5px;
+    margin: auto;
+
+}
+.portfolio:hover {
+    background-color: #ee6d52;
+    color: white;
+    transition: .2s;
+}
+
+
