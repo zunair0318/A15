@@ -277,7 +277,7 @@ body {
     background-color: black;
     color: white;
     font-size: 20px;
-    padding: 3in 1in .5in;
+    padding: 3in 1.5in .25in;
 }
 @media screen and (max-width: 999px) {
     .specs h1 {padding-top: .15in}
